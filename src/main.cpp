@@ -54,12 +54,12 @@ void conectaWiFi()
     Serial.println("");
     Serial.println("WiFi conectado.");
     Serial.println("Endereço de IP: ");
-    Serial.print(WiFi.localIP());
+    Serial.println(WiFi.localIP());
   }
   else
   {
-    Serial.println("\nNão foi possível conectar a rede ");
-    Serial.print(ssid);
+    Serial.print("\nNão foi possível conectar a rede ");
+    Serial.println(ssid);
   }
 }
 
@@ -160,7 +160,7 @@ void connect_wifi_public()
             if (WiFi.status() == WL_CONNECTED)
             {
               wifiConnected = WiFi.SSID(i);
-              Serial.println("WiFi conectado!" + wifiConnected);
+              Serial.println("WiFi conectado! " + wifiConnected);
             }
             else
             {
